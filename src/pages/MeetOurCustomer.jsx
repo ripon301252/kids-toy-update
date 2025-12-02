@@ -35,7 +35,7 @@ const MeetOurCustomer = () => {
         {heroes.map((hero, i) => (
           <div
             key={i}
-            className=" border border-gray-300 rounded-xl shadow hover:shadow-md transition-all p-4 backdrop-blur-lg bg-white/10"
+            className="rounded-xl shadow hover:shadow-md transition-all p-4 backdrop-blur-lg bg-white/10"
           >
             <img
               src={hero.img}

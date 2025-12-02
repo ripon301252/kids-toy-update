@@ -35,7 +35,7 @@ const DeliveryServiceInfo = () => {
         {services.map((service, index) => (
           <div
             key={index}
-            className="p-6 backdrop-blur-lg bg-white/10 border border-gray-300 rounded-xl shadow hover:scale-105 transition-all"
+            className="p-6 backdrop-blur-lg bg-white/10 rounded-xl shadow hover:scale-105 transition-all"
           >
             <div className="flex justify-center mb-3">{service.icon}</div>
             <h3 className="text-lg font-semibold text-white mb-2">

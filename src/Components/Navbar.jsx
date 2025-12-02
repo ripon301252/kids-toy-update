@@ -5,6 +5,7 @@ import userImg from "../assets/user.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoCloseSharp } from "react-icons/io5";
 import { toast } from "react-toastify";
+import logoImg from "../assets/toylogo.png";
 
 const Navbar = () => {
   const { user, logOut, loading } = useContext(AuthContext);
@@ -27,11 +28,15 @@ const Navbar = () => {
   return (
     <nav className="bg-[#001931] text-white px-4 md:px-6 py-4 sticky top-0 z-50 shadow-lg">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-
         {/* Logo */}
-        <Link to="/" className="text-2xl font-bold tracking-wide">
-          KidsToy
-        </Link>
+        <div className="flex items-center gap-1">
+          <div>
+            <img className="w-12" src={logoImg} alt="" />
+          </div>
+          <Link to="/" className="text-2xl font-bold tracking-wide">
+            KidsToy
+          </Link>
+        </div>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex gap-8 items-center text-[16px] font-medium">
@@ -39,7 +44,9 @@ const Navbar = () => {
             <NavLink
               to="/"
               className={({ isActive }) =>
-                isActive ? "text-purple-700 border-b-2 rounded-lg px-2" : "hover:text-purple-700"
+                isActive
+                  ? "text-purple-400 font-semibold bg-white/10 px-3 py-1 rounded-lg"
+                  : "hover:text-purple-300"
               }
             >
               Home
@@ -50,7 +57,9 @@ const Navbar = () => {
             <NavLink
               to="/allItems"
               className={({ isActive }) =>
-                isActive ? "text-purple-700 border-b-2 rounded-lg px-2" : "hover:text-purple-700"
+                isActive
+                  ? "text-purple-400 font-semibold bg-white/10 px-3 py-1 rounded-lg"
+                  : "hover:text-purple-300"
               }
             >
               All Items
@@ -61,7 +70,9 @@ const Navbar = () => {
             <NavLink
               to="/aboutUs"
               className={({ isActive }) =>
-                isActive ? "text-purple-700 border-b-2 rounded-lg px-2" : "hover:text-purple-700"
+                isActive
+                  ? "text-purple-400 font-semibold bg-white/10 px-3 py-1 rounded-lg"
+                  : "hover:text-purple-300"
               }
             >
               About Us
@@ -72,7 +83,9 @@ const Navbar = () => {
             <NavLink
               to="/contact"
               className={({ isActive }) =>
-                isActive ? "text-purple-700 border-b-2 rounded-lg px-2" : "hover:text-purple-700"
+                isActive
+                  ? "text-purple-400 font-semibold bg-white/10 px-3 py-1 rounded-lg"
+                  : "hover:text-purple-300"
               }
             >
               Contact
@@ -83,7 +96,9 @@ const Navbar = () => {
             <NavLink
               to="/support"
               className={({ isActive }) =>
-                isActive ? "text-purple-700 border-b-2 rounded-lg px-2" : "hover:text-purple-700"
+                isActive
+                  ? "text-purple-400 font-semibold bg-white/10 px-3 py-1 rounded-lg"
+                  : "hover:text-purple-300"
               }
             >
               Support
@@ -96,7 +111,9 @@ const Navbar = () => {
               <NavLink
                 to="/myProfile"
                 className={({ isActive }) =>
-                  isActive ? "text-purple-700 border-b-2 rounded-lg px-2" : "hover:text-purple-700"
+                  isActive
+                    ? "text-purple-400 font-semibold bg-white/10 px-3 py-1 rounded-lg"
+                    : "hover:text-purple-300"
                 }
               >
                 My Profile
@@ -107,7 +124,6 @@ const Navbar = () => {
 
         {/* Desktop Auth */}
         <div className="hidden md:flex items-center gap-4">
-
           {user ? (
             <>
               <div className="relative group">
@@ -123,7 +139,7 @@ const Navbar = () => {
 
               <button
                 onClick={handleLogout}
-                className="btn btn-sm bg-purple-700 text-white border-none hover:bg-purple-600 shadow-none"
+                className="btn btn-sm bg-purple-400 text-white border-none hover:bg-purple-300 shadow-none"
               >
                 Sign Out
               </button>
@@ -131,7 +147,7 @@ const Navbar = () => {
           ) : (
             <Link
               to="/signin"
-              className="btn btn-sm bg-purple-700 text-white border-none hover:bg-purple-600 shadow-none"
+              className="btn btn-sm bg-purple-400 text-white border-none hover:bg-purple-300 shadow-none"
             >
               Login / Register
             </Link>
@@ -139,13 +155,9 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Icon */}
-        <button
-          onClick={() => setOpen(!open)}
-          className="md:hidden text-white"
-        >
+        <button onClick={() => setOpen(!open)} className="md:hidden text-white">
           {open ? <IoCloseSharp size={28} /> : <GiHamburgerMenu size={28} />}
         </button>
-
       </div>
 
       {/* Mobile Menu */}
@@ -155,12 +167,21 @@ const Navbar = () => {
         }`}
       >
         <ul className="flex flex-col gap-4 px-4 text-white text-lg">
-
-          <NavLink to="/" onClick={() => setOpen(false)}>Home</NavLink>
-          <NavLink to="/allItems" onClick={() => setOpen(false)}>All Items</NavLink>
-          <NavLink to="/aboutUs" onClick={() => setOpen(false)}>About Us</NavLink>
-          <NavLink to="/contact" onClick={() => setOpen(false)}>Contact</NavLink>
-          <NavLink to="/support" onClick={() => setOpen(false)}>Support</NavLink>
+          <NavLink to="/" onClick={() => setOpen(false)}>
+            Home
+          </NavLink>
+          <NavLink to="/allItems" onClick={() => setOpen(false)}>
+            All Items
+          </NavLink>
+          <NavLink to="/aboutUs" onClick={() => setOpen(false)}>
+            About Us
+          </NavLink>
+          <NavLink to="/contact" onClick={() => setOpen(false)}>
+            Contact
+          </NavLink>
+          <NavLink to="/support" onClick={() => setOpen(false)}>
+            Support
+          </NavLink>
 
           {user && (
             <NavLink to="/myProfile" onClick={() => setOpen(false)}>
@@ -176,25 +197,22 @@ const Navbar = () => {
                   handleLogout();
                   setOpen(false);
                 }}
-                
-                className="btn btn-sm bg-purple-700 text-white border-none hover:bg-purple-600 w-full shadow-none"
+                className="btn btn-sm bg-purple-400 text-white border-none hover:bg-purple-300 shadow-none w-full"
               >
                 Sign Out
               </button>
             ) : (
               <Link
                 to="/signin"
-                 className="btn btn-sm bg-purple-700 text-white border-none hover:bg-purple-600 w-full shadow-none"
+                className="btn btn-sm bg-purple-400 text-white border-none hover:bg-purple-300 shadow-none w-full"
                 onClick={() => setOpen(false)}
               >
                 Login / Register
               </Link>
             )}
           </li>
-
         </ul>
       </div>
-
     </nav>
   );
 };

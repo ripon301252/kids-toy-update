@@ -14,7 +14,7 @@ const SlideBanner = () => {
 
   return (
     <div className="relative bg-[#001931] pt-4 pb-10 mt-8 rounded-2xl shadow-lg">
-      <section className="max-w-6xl mx-auto mt-6 px-4 md:px-0 relative">
+      <section className="max-w-[1190px] mx-auto mt-6 px-4 md:px-0 relative">
         <div className="carousel w-full rounded-2xl overflow-hidden relative">
           {/* Slide 1 */}
           <div id="slide1" className="carousel-item relative w-full">

@@ -6,7 +6,7 @@ const AllToyCard = ({ singleToy }) => {
      const { toyName, subCategory, pictureURL } = singleToy || {};
 
     return (
-        <div className="card backdrop-blur-lg bg-white/10 shadow-md rounded-lg overflow-hidden hover:scale-102 transition-transform">
+        <div className="card backdrop-blur-lg bg-white/10 shadow-md rounded-lg overflow-hidden hover:scale-105 transition-transform">
 
       {/* Image With Padding */}
       <div className="p-3">
