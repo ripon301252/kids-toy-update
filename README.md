@@ -27,12 +27,6 @@ A fun and interactive **kids learning/toy management system** designed to improv
 
 ---
 
-## 📸 Preview
-
-_Add screenshots or demo here_
-
----
-
 ## ⚙️ Installation
 
 ```bash
