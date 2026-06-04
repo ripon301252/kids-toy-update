@@ -1,30 +1,42 @@
-# React + Vite
+# 🧸 Kids Toy Update System
 
-# KidsToy
+A fun and interactive **kids learning/toy management system** designed to improve learning experience through digital interaction.
 
-## Purpose
-A local kids toy store platform to explore, buy, and manage toys easily.
+---
 
 ## Live URL
 [Visit Site ](https://kids-toy-up-73b1c6.netlify.app/)
 
-## Key Features
-- User Authentication (Email/Password & Google Sign-In)
-- Protected Routes (My Profile)
-- Dynamic Profile Update (Name & Photo)
-- Responsive Navbar & Mobile Menu
-- Slider/Carousel for featured toys
-- Popular Toys Section with Cards
-- 404 Not Found Page
-- Toast/SweetAlert for notifications
 
-## NPM Packages Used
-- react
-- react-dom
-- react-router
-- firebase
-- react-icons
-- react-toastify
-- tailwindcss
-- daisyui
-- axios
+
+## 🚀 Features
+
+- 🎮 Interactive kids-friendly UI
+- 🧠 Learning-based toy system
+- 🔄 Update & manage toy content
+- 📱 Responsive design
+- 🎨 Simple and colorful UI for kids
+
+---
+
+## 🛠️ Tech Stack
+
+- HTML / CSS / JavaScript (or React if used)
+- Node.js (if backend exists)
+- MongoDB (if database used)
+
+---
+
+## 📸 Preview
+
+_Add screenshots or demo here_
+
+---
+
+## ⚙️ Installation
+
+```bash
+git clone https://github.com/ripon301252/kids-toy-update.git
+cd kids-toy-update
+npm install
+npm run dev
