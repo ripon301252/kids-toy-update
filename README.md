@@ -1,4 +1,4 @@
-# 🧸 Kids Toy Update 
+# 🧸 Kids Toy 
 
 A fun and interactive **kids learning/toy management system** designed to improve learning experience through digital interaction.
 
